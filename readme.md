@@ -6,7 +6,7 @@ Built for app version P2D:J:B:A:2020120200. This will very likely break on updat
 
 Runs on .NET Framework 4.6 so should just work on any version of Windows 10 without any extra faffing.
 
-![screenshot](docs/screenshot.png)
+![screenshot](docs/screenshot.PNG)
 
 ## How to use
 
