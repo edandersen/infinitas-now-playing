@@ -6,6 +6,8 @@ Built for app version P2D:J:B:A:2020120200. This will very likely break on updat
 
 Runs on .NET Framework 4.6 so should just work on any version of Windows 10 without any extra faffing.
 
+![screenshot](docs/screenshot.png)
+
 ## How to use
 
 - Run ```InfinitasNowPlayingReader.exe``` as Admin (needed to read the memory of other programs)

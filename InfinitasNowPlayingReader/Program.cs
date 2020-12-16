@@ -55,7 +55,7 @@ namespace IIDXMemory
             {
                 var currentSongId = GetLastSongPreviewBgmId(processHandle);
 
-                if (!string.IsNullOrEmpty(currentSongId))
+                if (!string.IsNullOrEmpty(currentSongId) && !currentSongId.Contains("\0"))
                 {
                     if (!songList.Any())
                     {
