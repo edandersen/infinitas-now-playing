@@ -1,0 +1,19 @@
+# Infinitas Now Playing
+
+This quick and dirty app reads the memory of Beatmania IIDX Infinitas and writes the currently playing song title (and English / 8Seg title), genre and artist to four text files, ready to be read by streaming apps.
+
+Built for app version P2D:J:B:A:2020120200. This will very likely break on updates.
+
+## How to use
+
+- Run ```InfinitasNowPlayingReader.exe``` as Admin (needed to read the memory of other programs)
+- Start Infinitas
+
+Once you get to the song selection screen, the app will start writing the following text files alongside the exe when a different song is highlighted on the song selection screen:
+
+- ```title.txt``` : The song title
+- ```englishtitle.txt``` : The english song title (used for the 8seg display)
+- ```genre.txt``` : the song genre
+- ```artist.txt``` : the song artist
+
+Detection is when playing a song preview, so Random song selection does not work (as it doesn't play a preview). The files won't then change during the song.
