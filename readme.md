@@ -2,7 +2,7 @@
 
 This quick and dirty app reads the memory of Beatmania IIDX Infinitas and writes the currently playing song title (and English / 16Seg title), genre and artist to four text files, ready to be read by streaming apps.
 
-Built for app version P2D:J:B:A:2020120200. This will very likely break on updates.
+Built for app version P2D:J:B:A:2020122300. This will very likely break on updates.
 
 Runs on .NET Framework 4.6 so should just work on any version of Windows 10 without any extra faffing.
 
