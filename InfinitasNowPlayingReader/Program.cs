@@ -59,7 +59,7 @@ namespace IIDXMemory
                 {
                     if (!songList.Any())
                     {
-                        var initialMemory = 0x141D44160; // 5.1.1 lol
+                        var initialMemory = 0x141D4A160; // 5.1.1 lol
                         var currentMemory = initialMemory;
                         Console.WriteLine("Loading songlist from memory");
                         while (true)
@@ -158,7 +158,8 @@ namespace IIDXMemory
 
             byte[] buffer = new byte[5];
 
-            ReadProcessMemory((int)processHandle, 0x141D10248, buffer, buffer.Length, ref bytesRead);
+            // this is the address of the song playing preview file, for example 01006_pre.2dx
+            ReadProcessMemory((int)processHandle, 0x141D15008, buffer, buffer.Length, ref bytesRead); 
 
             var lastBgmSongId = Encoding.UTF8.GetString(buffer);
 
