@@ -59,7 +59,7 @@ namespace IIDXMemory
                 {
                     if (!songList.Any())
                     {
-                        var initialMemory = 0x141D4B190; // 5.1.1 lol
+                        var initialMemory = 0x141D4B1A0; // 5.1.1 lol
                         var currentMemory = initialMemory;
                         Console.WriteLine("Loading songlist from memory");
                         while (true)
