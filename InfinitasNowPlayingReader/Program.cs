@@ -24,9 +24,14 @@ namespace IIDXMemory
         public static extern bool ReadProcessMemory(int hProcess,
             Int64 lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesRead);
 
+        static Int64 songListStartAddress = Int64.Parse("141D633F0", System.Globalization.NumberStyles.HexNumber); // 5.1.1 memory start
+        static Int64 nowPlayingStartAddress = Int64.Parse("141CE1498", System.Globalization.NumberStyles.HexNumber); // this is the address of the song playing preview file, for example 01006_pre.2dx
+
         static void Main(string[] args)
         {
             Process process = null;
+
+
 
             Console.WriteLine("Waiting for Infinitas launch...");
 
@@ -59,7 +64,7 @@ namespace IIDXMemory
                 {
                     if (!songList.Any())
                     {
-                        var initialMemory = 0x141D4E1B0; // 5.1.1 lol
+                        var initialMemory = songListStartAddress; // 5.1.1 lol
                         var currentMemory = initialMemory;
                         Console.WriteLine("Loading songlist from memory");
                         while (true)
@@ -158,8 +163,7 @@ namespace IIDXMemory
 
             byte[] buffer = new byte[5];
 
-            // this is the address of the song playing preview file, for example 01006_pre.2dx
-            ReadProcessMemory((int)processHandle, 0x141CCB008, buffer, buffer.Length, ref bytesRead); 
+            ReadProcessMemory((int)processHandle, nowPlayingStartAddress, buffer, buffer.Length, ref bytesRead); 
 
             var lastBgmSongId = Encoding.UTF8.GetString(buffer);
 
