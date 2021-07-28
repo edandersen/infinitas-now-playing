@@ -1,3 +1,7 @@
+# DISCONTINUED - use Reflux instead
+
+Stop using this app and use [Reflux](https://github.com/olji/Reflux) instead. It's much better and has a load more options. Go and give them a Star!
+
 # Infinitas Now Playing
 
 This quick and dirty app reads the memory of Beatmania IIDX Infinitas and writes the currently playing song title (and English / 16Seg title), genre and artist to four text files, ready to be read by streaming apps.
